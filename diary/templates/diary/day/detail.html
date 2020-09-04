@@ -1,0 +1,12 @@
+{% extends "diary/base.html" %}
+{% block title %} {{ day.Name }} {% endblock %}
+{% block content %}
+  <h1>
+    {{ day.Name }}
+  </h1>
+  <p class = 'date'>
+    This describes the day {{ day.Date }} of {{ day.Profile }}
+  </p>
+  Description: {{day.Description}}.
+  My happiness on this day was {{ day.Happiness_Score }}
+{% endblock %}

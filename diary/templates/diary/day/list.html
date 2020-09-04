@@ -1,0 +1,16 @@
+{% extends "diary/base.html" %}
+{% block title %} My Days {% endblock %}
+{% block content %}
+  <h1> My Days </h1>
+  {% for day in days %}
+    <h2>
+      <a href="{{ day.get_absolute_url}}">
+        {{day.Name}}
+      </a>
+    </h2>
+  <p class = "date">
+    This describes the day {{day.Date}} of {{day.Profile}}
+  </p>
+  {{day.Description}}
+{% endfor %}
+{% endblock %}
